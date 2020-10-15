@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using Ocelot.Provider.Polly;
 
 namespace ocelot_gateway
 {
@@ -28,6 +29,7 @@ namespace ocelot_gateway
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddOcelot()
+                    .AddPolly()
                     .AddSingletonDefinedAggregator<FakeDefinedAggregator>();
             services.AddControllers();
         }

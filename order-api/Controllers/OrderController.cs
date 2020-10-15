@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
 namespace order_api.Controllers
@@ -12,6 +13,7 @@ namespace order_api.Controllers
         [HttpGet]
         public  IEnumerable<string> Get()
         {
+            // Task.Delay(3000).Wait();
             return new string[] { "Nick的訂單", "Jeff的訂單" };
             // throw new Exception("get some error");
         }
