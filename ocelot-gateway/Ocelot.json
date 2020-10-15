@@ -10,7 +10,7 @@
         }
       ],
       "UpstreamPathTemplate": "/api/orders?id={id}",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamHttpMethod": ["Get"]
     },
     {
       "DownstreamPathTemplate": "/api/orders",
@@ -22,8 +22,15 @@
         }
       ],
       "UpstreamPathTemplate": "/api/orders",
-      "UpstreamHttpMethod": [ "Get" ],
-      "Key": "Orders"
+      "UpstreamHttpMethod": ["Get"],
+      "Key": "Orders",
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 10,
+        "Limit": 1
+      }
     },
     {
       "DownstreamPathTemplate": "/api/products",
@@ -35,22 +42,25 @@
         }
       ],
       "UpstreamPathTemplate": "/api/products",
-      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamHttpMethod": ["Get"],
       "Priority": 0,
       "Key": "Products"
     }
   ],
   "Aggregates": [
     {
-      "RouteKeys": [
-        "Orders",
-        "Products"
-      ],
+      "RouteKeys": ["Orders", "Products"],
       "UpstreamPathTemplate": "/api/aggregates",
       "Aggregator": "FakeDefinedAggregator"
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:5000"
+    "BaseUrl": "http://localhost:5000",
+    "RateLimitOptions": {
+      "DisableRateLimitHeaders": false,
+      "QuotaExceededMessage": "too many requests...",
+      "HttpStatusCode": 999,
+      "ClientIdHeader": "Test"
+    }
   }
 }
