@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,6 +13,7 @@ namespace order_api.Controllers
         public  IEnumerable<string> Get()
         {
             return new string[] { "Nick的訂單", "Jeff的訂單" };
+            // throw new Exception("get some error");
         }
         
         [Route("api/orders/{id}")]

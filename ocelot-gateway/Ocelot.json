@@ -46,7 +46,8 @@
         "Orders",
         "Products"
       ],
-      "UpstreamPathTemplate": "/api/aggregates"
+      "UpstreamPathTemplate": "/api/aggregates",
+      "Aggregator": "FakeDefinedAggregator"
     }
   ],
   "GlobalConfiguration": {
