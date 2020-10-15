@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Ocelot.Cache.CacheManager;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 using Ocelot.Provider.Polly;
@@ -30,6 +31,10 @@ namespace ocelot_gateway
         {
             services.AddOcelot()
                     .AddPolly()
+                    .AddCacheManager(x =>
+                    {
+                        x.WithDictionaryHandle();
+                    })
                     .AddSingletonDefinedAggregator<FakeDefinedAggregator>();
             services.AddControllers();
         }
