@@ -19,8 +19,15 @@
         {
           "Host": "localhost",
           "Port": 5001
+        },
+        {
+          "Host": "localhost",
+          "Port": 6001
         }
       ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      },
       "UpstreamPathTemplate": "/api/orders",
       "UpstreamHttpMethod": ["Get"],
       "Key": "Orders",
@@ -28,17 +35,13 @@
         "ClientWhitelist": [],
         "EnableRateLimiting": true,
         "Period": "1s",
-        "PeriodTimespan": 10,
+        "PeriodTimespan": 3,
         "Limit": 1
       },
       "QoSOptions": {
         "ExceptionsAllowedBeforeBreaking": 2,
         "DurationOfBreak": 5000,
         "TimeoutValue": 2000
-      },
-      "FileCacheOptions": {
-        "TtlSeconds": 60,
-        "Region": "orders"
       }
     },
     {

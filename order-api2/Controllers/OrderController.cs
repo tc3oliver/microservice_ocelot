@@ -12,7 +12,7 @@ namespace order_api.Controllers
         public IEnumerable<string> Get()
         {
             // Task.Delay(3000).Wait();
-            return new[] {"Nick1的訂單", "Jeff1的訂單"};
+            return new[] {"Nick2的訂單", "Jeff2的訂單"};
             // throw new Exception("get some error");
         }
 

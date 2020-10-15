@@ -11,8 +11,7 @@ namespace product_api.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "iPhone 12 Pro", "MacBook Pro" };
+            return new[] {"iPhone 12 Pro", "MacBook Pro"};
         }
-
     }
 }

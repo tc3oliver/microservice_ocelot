@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "product-api", "product-api\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ocelot-gateway", "ocelot-gateway\ocelot-gateway.csproj", "{5C1BF357-386B-41FD-A7CE-988398AF6C20}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "order-api2", "order-api2\order-api2.csproj", "{74E8AFF4-B64C-4C6C-8E84-28165B8B806B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{5C1BF357-386B-41FD-A7CE-988398AF6C20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C1BF357-386B-41FD-A7CE-988398AF6C20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C1BF357-386B-41FD-A7CE-988398AF6C20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74E8AFF4-B64C-4C6C-8E84-28165B8B806B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74E8AFF4-B64C-4C6C-8E84-28165B8B806B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74E8AFF4-B64C-4C6C-8E84-28165B8B806B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74E8AFF4-B64C-4C6C-8E84-28165B8B806B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -20,7 +20,5 @@ namespace ocelot_gateway
             var headers = responses.SelectMany(x => x.Items.DownstreamResponse().Headers).ToList();
             return new DownstreamResponse(new StringContent(merge), HttpStatusCode.OK, headers, "some reason");
         }
-
     }
-    
 }
